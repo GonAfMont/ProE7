@@ -1,0 +1,13 @@
+package P48J;
+
+import com.google.gson.*;
+import P48J.*;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

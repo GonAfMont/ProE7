@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;P48J/src/main/resources/Xml48.xml&apos; to &apos;Autos.xml&apos;" description="Rename resource &apos;Xml48.xml&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/resources/Xml48.xml" name="Autos.xml" stamp="1715859881926" updateReferences="true"/>
+</session>

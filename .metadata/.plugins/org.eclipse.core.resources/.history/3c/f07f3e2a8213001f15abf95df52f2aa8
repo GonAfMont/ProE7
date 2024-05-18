@@ -1,0 +1,85 @@
+package PExa7;
+
+import java.util.*;
+
+public class CuentaBancaria {
+	protected String nombre;
+	protected String Dni;
+	protected Integer nEntidad;
+	protected Integer nSucursal;
+	protected Integer dControl;
+	protected Integer cCuenta;
+
+	public CuentaBancaria(String nombre, String Dni, Integer nEntidad, Integer nSucursal, Integer dControl, Integer cCuenta) {
+		this.nombre = nombre;
+		if (Dni.matches("\\d{8}[A-Za-z]")) {
+			this.Dni = Dni;
+		}
+		else {
+			throw new IllegalArgumentException("DniDeEjemplo: 12345678A\nAsegúrate de que el Dni sea correcto");
+		}
+		if (nEntidad.toString().matches("\\d{4}")) {
+			this.nEntidad = nEntidad;
+		}
+		else {
+			throw new IllegalArgumentException("NúmeroDeEntidadDeEjemplo: 1234\nAsegúrate de que el Número de entidad sea correcto");
+		}
+		if (nSucursal.toString().matches("\\d{4}")) {
+		this.nSucursal = nSucursal;	
+		}
+		else {
+			throw new IllegalArgumentException("NúmeroDeSucursalDeEjemplo: 5678\nAsegúrate de que el Número de sucursal sea correcto");
+		}
+		if (dControl.toString().matches("\\d{2}")) {
+		this.dControl = dControl;
+		}
+		else {
+			throw new IllegalArgumentException("DígitosDeControlDeEjemplo: 90\nAsegúrate de que los dígitos de control sean correctos");
+		}
+		if (cCuenta.toString().matches("\\d{10}")) {
+			this.cCuenta = cCuenta;
+			}
+		else {
+			throw new IllegalArgumentException("CódigoDeCuentaDeEjemplo: 1234567890\nAsegúrate de que el código de cuenta sea correcto");
+		}
+		
+	}
+	
+	
+	public String getNombre() {
+		return nombre;
+	}
+	
+	public String getDni() {
+		return Dni;
+	}
+	
+	public Integer getnEntidad() {
+		return nEntidad;
+	}
+	
+	public Integer getnSucursal() {
+		return nSucursal;
+	}
+	
+	public Integer getdControl() {
+		return dControl;
+	}
+	
+	public Integer getCodigoDeCuenta() {
+		return cCuenta;
+	}
+	
+	public Integer getCCC() {
+		return nEntidad + nSucursal + dControl + cCuenta;
+	}
+	
+	
+	
+	@Override
+	public String toString() {
+		return "Nombre: " + nombre + "\nDni: " + Dni + "\nNúmero de Entidad: " + nEntidad + "\nNúmero de Sucursal:" + nSucursal + "\nDígitos de Control:"+ dControl + "\nCódigo de Cuenta:" + cCuenta + "\nCCC:" + nEntidad + "-" + nSucursal + "-" + dControl + "-" + cCuenta;
+	}
+	
+}
+ 

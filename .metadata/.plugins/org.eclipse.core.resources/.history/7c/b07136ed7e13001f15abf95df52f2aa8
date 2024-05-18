@@ -1,0 +1,54 @@
+package PExa7;
+
+import java.util.*;
+
+public class CuentaBancaria {
+	protected String nombre;
+	protected String Dni;
+	protected Integer Entidad;
+	protected Integer Sucursal;
+	protected Integer dControl;
+	protected Integer cCuenta;
+
+	public CuentaBancaria(String nombre, String Dni, Integer cCuenta, Integer Entidad, Integer Sucursal, Integer dControl) {
+		this.nombre = nombre;
+		if (Dni.matches("\\d{8}[A-Za-z]")) {
+			this.Dni = Dni;
+		}
+		else {
+			throw new IllegalArgumentException("DniDeEjemplo: 12345678A\nAsegúrate de que el Dni sea correcto");
+		}
+		if (Entidad.toString().matches("\\d{4}")) {
+			this.Entidad = Entidad;
+		}
+		
+		this.Sucursal = Sucursal;
+		this.dControl = dControl;
+		/**		if (CCC.matches("\\d{4}-\\d{4}-\\d{2}-\\d{10}")) {
+			this.CCC = CCC;
+		}
+		else {
+			throw new IllegalArgumentException("CCCDeEjemplo: 1234-5678-90-1234567890\nAsegúrate de que el CCC sea correcto");
+		}*/
+	}
+	
+	
+	public String getNombre() {
+		return nombre;
+	}
+	
+	public String getDni() {
+		return Dni;
+	}
+	
+	public Integer getCodigoDeCuenta() {
+		return cCuenta;
+	}
+	
+	@Override
+	public String toString() {
+		return "Nombre: " + nombre + "\nDni: " + Dni + "\nCCC: " + CCC;
+	}
+	
+}
+ 

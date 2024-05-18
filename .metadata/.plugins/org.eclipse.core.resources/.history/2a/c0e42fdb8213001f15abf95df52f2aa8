@@ -1,0 +1,33 @@
+package PExa7;
+ 
+import PExa7.*;
+import java.util.*;
+
+public class Main {
+
+	public static void main(String[] args) {
+		try {
+			
+			CuentaBancaria Cb = new CuentaBancaria("Pepe Pérez","12345678A",1234,5678,90,1234567890);
+			
+			
+			int console = 1;
+			switch (console) {
+			case 1: System.out.print("CCC completo" + CuentaBancaria.getCCC());
+			case 2: System.out.print("");
+			case 3: System.out.print("");
+			case 4: System.out.print("");
+			case 5: System.out.print("");
+			case 6: System.out.print("");
+			case 7: System.out.print("");
+			case 8: System.out.print("");
+			case 9: System.out.print("");
+			case 10: System.out.print("");
+			
+			}
+			
+		}catch (IllegalArgumentException Iae) {
+			System.out.print(Iae.getMessage());
+		}
+	}
+}

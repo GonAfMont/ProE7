@@ -1,0 +1,2 @@
+module PExa7 {
+}

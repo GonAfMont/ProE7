@@ -1,0 +1,16 @@
+package PExa7;
+ 
+import PExa7.*;
+import java.util.*;
+
+public class Main {
+
+	public static void main(String[] args) {
+		try {
+			CuentaBancaria Cb = new CuentaBancaria("Pepe Pérez","12345678A",1234,5678,90,1234567890);
+			System.out.print(Cb);
+		}catch (IllegalArgumentException Iae) {
+			System.out.print(Iae.getMessage());
+		}
+	}
+}
